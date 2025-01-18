@@ -1,0 +1,26 @@
+l1 = [1, 7, 11,13,19, 20, 22, 24, 27, 30] #Initializing the list#If list in not sorted than we have to sort the list first
+targetvalue = 13  #settingb the target 
+
+def binarySearch(l1,targetvalue):#Function to find the required value
+    left = 0
+    right = len(l1) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        if l1[mid] == targetvalue:
+            return mid
+        
+        if l1[mid] < targetvalue:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return -1
+
+result = binarySearch(l1, targetvalue)#storing the returned value in the result
+
+if result != -1:#checking the condition to print result
+    print("Value",targetvalue,"found at index", result)
+else:
+    print("Targetvalue not found in list")
