@@ -1,0 +1,15 @@
+l1 = [3, 7, 2, 9, 5]  #Initializing list
+requiredvalue = 2      #setting target
+
+def linearSearch(l1, requiredvalue): #Function to check each value in the list
+    for i in range(len(l1)):
+        if l1[i] == requiredvalue:
+            return i
+    return -1
+
+result = linearSearch(l1, requiredvalue)#storing returned value in result
+
+if result != -1:
+    print("Item",requiredvalue,"found at index",result)
+else:
+    print("Item",requiredvalue,"not found")
